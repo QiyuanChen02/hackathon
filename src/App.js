@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import './App.css'
+import ConnectToWallet from './components/connectToWallet'
 import GoogleLoginButton from './components/googleLogin'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
         <Box>
             <h1>Hello World</h1>
             <GoogleLoginButton />
+            <ConnectToWallet />
         </Box>
     )
 }
