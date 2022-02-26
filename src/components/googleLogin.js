@@ -1,5 +1,7 @@
 import { Box, Typography } from '@mui/material'
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import React from 'react'
+import { auth } from '../firebase'
 
 const buttonHeight = 56
 const styles = {
@@ -34,9 +36,9 @@ const styles = {
 }
 
 function GoogleLoginButton() {
-
-    const signupWithGoogle = async () => {
-        alert("Signing up...")
+    const signupWithGoogle = () => {
+        const provider = new GoogleAuthProvider()
+        signInWithPopup(auth, provider)
     }
 
     return (
